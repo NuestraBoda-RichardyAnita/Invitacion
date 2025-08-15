@@ -1,0 +1,802 @@
+/* Paleta de colores y variables globales */
+:root {
+    --primary-dark: #46512F;
+    --secondary-dark: #606C44;
+    --primary-light: #8DA478;
+    --secondary-light: #77865D;
+    --background: #fdfaf6;
+    --swiper-theme-color: var(--primary-dark);
+}
+
+/* Estilos base */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--background);
+    color: #333;
+}
+
+/* SECCIÓN 1: BIENVENIDA CON IMAGEN PRINCIPAL */
+.fondo-imagen {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    box-sizing: border-box;
+    background: url('Recursos/Header_1.jpg') center/cover no-repeat;
+    padding-top: 15vh;
+}
+
+.titulo-principal p {
+    font-size: 1.5rem;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+/* Aplicando Great Vibes al título principal */
+.titulo-principal h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 5.5rem;
+    /* Aumentamos el tamaño para mayor impacto */
+    font-weight: normal;
+    /* Las fuentes script se ven mejor sin negrita */
+    margin: 10px 0 20px 0;
+    line-height: 1;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.reproductor-musica {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.boton-corazon {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+    color: white;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.boton-corazon:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.1);
+}
+
+.boton-corazon .fa-heart {
+    font-size: 1.8rem;
+}
+
+.btn-fake {
+    font-size: 1.5rem;
+    color: white;
+    opacity: 0.6;
+}
+
+.mensaje-reproductor {
+    color: white;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.boton-corazon.playing .fa-heart {
+    animation: heartbeat 1.5s infinite ease-in-out;
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+    }
+
+    15% {
+        transform: scale(1.2);
+    }
+
+    30% {
+        transform: scale(1);
+    }
+
+    45% {
+        transform: scale(1.2);
+    }
+
+    60% {
+        transform: scale(1);
+    }
+}
+
+/* SECCIÓN 2: PADRES Y PADRINOS */
+.info-padres {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.info-padres .mensaje-principal {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 50px;
+}
+
+.contenedor-columnas {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.columna {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* Aplicando Great Vibes a los títulos de columna */
+.columna h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.8rem;
+    /* Tamaño ajustado */
+    font-weight: normal;
+    color: var(--secondary-dark);
+    margin-bottom: 15px;
+}
+
+.columna p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 5px 0;
+    color: #555;
+}
+
+.contenedor-adicionales {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    padding-top: 50px;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* SECCIÓN 3: CUENTA REGRESIVA */
+.seccion-cuenta-regresiva {
+    padding: 60px 20px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: var(--primary-dark);
+    color: white;
+}
+
+/* Aplicando Great Vibes al título de la cuenta regresiva */
+.seccion-cuenta-regresiva h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.5rem;
+    /* Tamaño ajustado */
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.reloj-regresivo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.tiempo-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid var(--primary-light);
+    border-radius: 50%;
+}
+
+.tiempo-item .numero {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1.1;
+}
+
+.tiempo-item .etiqueta {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 480px) {
+    .reloj-regresivo {
+        gap: 10px;
+    }
+
+    .tiempo-item {
+        width: 75px;
+        height: 75px;
+    }
+
+    .tiempo-item .numero {
+        font-size: 1.8rem;
+    }
+}
+
+/* SECCIÓN 4: CALENDARIO */
+.seccion-calendario {
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Aplicando Great Vibes a los títulos de sección generales */
+.titulo-seccion {
+    font-family: 'Great Vibes', cursive;
+    font-weight: normal;
+    text-align: center;
+    font-size: 3.5rem;
+    /* Tamaño ajustado y unificado */
+    color: var(--secondary-dark);
+    margin: 0 0 20px 0;
+}
+
+.calendario {
+    width: 100%;
+    max-width: 450px;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.calendario-header p {
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    /* Mantenemos Montserrat para legibilidad aquí */
+    color: var(--secondary-light);
+    margin: 0 0 20px 0;
+    padding-top: 10px;
+}
+
+.calendario-dias-semana,
+.calendario-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.calendario-dias-semana div {
+    text-align: center;
+    font-weight: bold;
+    color: var(--secondary-light);
+    padding-bottom: 10px;
+}
+
+.calendario-grid div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.dia-vacio {
+    background-color: transparent;
+}
+
+.dia-boda {
+    background-color: var(--primary-dark) !important;
+    color: white !important;
+    border-radius: 50%;
+    position: relative;
+    font-weight: bold;
+}
+
+.dia-boda::after {
+    content: '♥';
+    position: absolute;
+    font-size: 0.7rem;
+    color: white;
+    bottom: 8px;
+}
+
+
+/* SECCIÓN 5: CARRUSEL DE FOTOS */
+.seccion-carrusel {
+    padding: 60px 0;
+}
+
+.swiper {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.swiper-pagination-bullet {
+    background: var(--secondary-light) !important;
+    opacity: 0.7 !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--primary-dark) !important;
+    opacity: 1 !important;
+}
+
+/* SECCIÓN 6: LUGAR */
+.seccion-lugar {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.subtitulo-lugar {
+    font-family: 'Montserrat', sans-serif;
+    /* Mantenemos Montserrat para el nombre del local */
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--secondary-dark);
+    margin-top: -15px;
+    margin-bottom: 5px;
+}
+
+.direccion-lugar {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.boton-mapa {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: var(--primary-dark);
+    color: white;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.boton-mapa:hover {
+    background-color: var(--primary-light);
+    transform: scale(1.05);
+}
+
+.boton-mapa i {
+    margin-right: 8px;
+}
+
+
+/* SECCIÓN 7: PROGRAMA */
+.seccion-programa {
+    padding: 60px 20px;
+}
+
+.linea-de-tiempo {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.linea-de-tiempo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 20px;
+    height: 100%;
+    width: 4px;
+    background: var(--primary-light);
+    border-radius: 2px;
+}
+
+.evento-timeline {
+    position: relative;
+    padding: 10px 40px;
+    margin-left: 60px;
+    margin-bottom: 30px;
+}
+
+.icono-evento {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: -70px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    border-radius: 50%;
+    padding: 5px;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contenido-timeline {
+    padding: 15px;
+    background: #fff;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.hora-timeline {
+    font-weight: bold;
+    color: var(--primary-dark);
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Aplicando Great Vibes a los títulos de los eventos */
+.contenido-timeline h3 {
+    font-family: 'Great Vibes', cursive;
+    font-weight: normal;
+    font-size: 2.2rem;
+    /* Tamaño ajustado */
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.contenido-timeline p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #666;
+}
+
+
+/* SECCIÓN 8: FOTOS INTERMEDIAS */
+.seccion-foto {
+    padding: 0;
+    line-height: 0;
+}
+
+.seccion-foto img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* SECCIÓN 9: REGLAS E INFORMACIÓN */
+.seccion-reglas-info {
+    padding: 60px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.cuadro-info {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    flex-basis: 280px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.icono {
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px auto;
+    object-fit: contain;
+}
+
+/* Aplicando Great Vibes a los títulos de los cuadros de info */
+.cuadro-info h3 {
+    font-family: 'Great Vibes', cursive;
+    font-weight: normal;
+    font-size: 2.2rem;
+    /* Tamaño ajustado */
+    color: var(--secondary-dark);
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.cuadro-info p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.cuadro-info p:last-of-type {
+    margin-bottom: 0;
+}
+
+.enlace-tienda {
+    display: inline-block;
+    margin-top: 8px;
+    text-decoration: none;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    /* <- ASEGÚRATE DE QUE ESTÉ ESTO */
+    font-weight: bold;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+    padding: 5px 12px;
+    font-size: 0.85em;
+}
+
+.contenedor-qr {
+    display: flex;
+    /* <-- Clave: Activa el modo de fila */
+    flex-wrap: wrap;
+    /* Permite que se adapten en pantallas muy pequeñas */
+    justify-content: center;
+    /* Centra el grupo de botones */
+    align-items: flex-start;
+    /* Alinea los items desde arriba */
+    gap: 20px;
+    /* Espacio entre cada item (QR + botón) */
+    margin-top: 15px;
+}
+
+/* Y asegúrate que el estilo para cada item no ocupe todo el ancho */
+.qr-item {
+    text-align: center;
+    /* No necesita más estilos, se adaptará al contenedor flex */
+}
+
+.enlace-tienda:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.enlace-tienda i {
+    margin-right: 5px;
+}
+
+
+/* SECCIÓN 10: DRESS CODE */
+.seccion-dresscode {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+}
+
+.subtitulo-compuesto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 25px;
+}
+
+.subtitulo-compuesto .parte1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    color: #888;
+}
+
+/* Aplicando Great Vibes al título de Dress Code */
+.subtitulo-compuesto .parte2 {
+    font-family: 'Great Vibes', cursive;
+    font-weight: normal;
+    font-size: 3.5rem;
+    /* Tamaño ajustado */
+    color: var(--secondary-dark);
+    line-height: 1;
+}
+
+.subtitulo-compuesto .parte3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-dark);
+    background-color: #FDF4E3;
+    padding: 8px 25px;
+    border-radius: 5px;
+    margin-top: 5px;
+    border: none;
+}
+
+.texto-introductorio {
+    font-size: 1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto 50px auto;
+}
+
+.dresscode-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.columna-atuendo {
+    flex: 1;
+    min-width: 250px;
+    padding: 0 20px;
+}
+
+#columna-ellos {
+    text-align: right;
+}
+
+#columna-ellas {
+    text-align: left;
+}
+
+/* Aplicando Great Vibes a los títulos de "Para Ellos/Ellas" */
+.columna-atuendo h3 {
+    font-family: 'Great Vibes', cursive;
+    font-weight: normal;
+    font-size: 2.8rem;
+    /* Tamaño ajustado */
+    color: var(--secondary-dark);
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.texto-vestimenta {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.columna-imagen-central img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.dresscode-paletas {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid #eee;
+}
+
+.dresscode-paletas h4 {
+    font-family: 'Montserrat', sans-serif;
+    /* Mantenemos Montserrat para legibilidad */
+    font-size: 1.5rem;
+    color: var(--secondary-dark);
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.paleta-grupo h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.paleta-container {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.color-swatch {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+
+    #columna-ellos,
+    #columna-ellas {
+        text-align: center;
+        order: 2;
+    }
+
+    .columna-imagen-central {
+        order: 1;
+    }
+}
+
+
+/* SECCIÓN 11: CONFIRMACIÓN DE ASISTENCIA */
+.seccion-confirmacion {
+    padding: 60px 20px;
+    background-color: var(--primary-dark);
+    color: white;
+    text-align: center;
+}
+
+/* Aplicando Great Vibes al título de confirmación */
+.titulo-confirmacion {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.5rem;
+    /* Tamaño ajustado */
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.texto-limite {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.boton-confirmar {
+    display: inline-block;
+    padding: 15px 45px;
+    background-color: #fff;
+    color: var(--primary-dark);
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.boton-confirmar:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
+
+.mensaje-final {
+    margin-top: 30px;
+    font-size: 1.2rem;
+    font-family: 'Great Vibes', cursive;
+    font-style: normal;
+    /* Las fuentes script ya son "itálicas" por naturaleza */
+    opacity: 0.9;
+}

@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Boda - Richard y Anita</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+
+    <body>
+
+        <div class="fondo-imagen">
+            <div class="titulo-principal">
+                <p>Nuestra boda</p>
+                <h1>Richard & Anita</h1>
+            </div>
+            <div class="reproductor-musica">
+                <i class="fas fa-backward-step btn-fake"></i> <button class="boton-corazon" id="boton-musica-principal"
+                    aria-label="Reproducir música">
+                    <i class="fas fa-heart"></i>
+                </button>
+                <i class="fas fa-forward-step btn-fake"></i>
+            </div>
+            <p class="mensaje-reproductor">Presiona el ♥ para escuchar nuestra canción</p>
+        </div>
+
+        <div class="info-padres">
+            <img src="64px/Mensaje de losnovios.png" alt="Mensaje de los novios" class="icono">
+            <p class="mensaje-principal"> A nuestra querida familia y amigos:
+                Con muchísima alegría en el corazón, queremos invitarles
+                a ser parte de uno de los momentos más importantes de
+                nuestra vida: ¡nuestra boda!
+                Será un día lleno de amor, fe y gratitud, y no sería lo
+                mismo sin ustedes. Cada uno ha marcado nuestra historia
+                de una manera especial, y nos emociona profundamente
+                poder compartir esta nueva etapa junto a quienes tanto
+                queremos.
+                Su presencia será un regalo que atesoraremos por
+                siempre.
+                Los esperamos con mucho cariño para celebrar juntos este
+                día tan soñado.
+                ¡Gracias por ser parte de nuestra historia!
+                Con cariño
+                RICHARD Y ANA</p>
+
+            <hr>
+            <div class="contenedor-columnas">
+                <div class="columna">
+                    <img src="64px/Padres de la Novia y novio.png" alt="Padres del Novio" class="icono">
+                    <h2>Padres del Novio</h2>
+                    <p>Richard Cusilayme Parraga</p>
+                    <p>Jenny Sylvia Filio Porras</p>
+                </div>
+                <div class="columna">
+                    <img src="64px/Padres de la Novia y novio.png" alt="Padres de la Novia" class="icono">
+                    <h2>Padres de la Novia</h2>
+                    <p>🕊️ Pedro Muñasqui C.</p>
+                    <p>Espirita Rojas Ñaña</p>
+                </div>
+            </div>
+
+            <div class="contenedor-adicionales">
+                <div class="columna">
+                    <img src="64px/Testigos.png" alt="Padrino" class="icono">
+                    <h2>Padrinos</h2>
+                    <p>Donald Edward Seeders</p>
+                    <p>Dorie Campbell Seeders</p>
+                </div>
+                <div class="columna">
+                    <img src="64px/Testigos.png" alt="Testigos" class="icono">
+                    <h2>Testigos</h2>
+                    <p>David Angulo Cárdenas</p>
+                    <p>Karen Avalos Alva</p>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="seccion-cuenta-regresiva">
+            <h2>Falta...</h2>
+            <div class="reloj-regresivo">
+                <div class="tiempo-item">
+                    <span id="dias" class="numero">00</span>
+                    <span class="etiqueta">Días</span>
+                </div>
+                <div class="tiempo-item">
+                    <span id="horas" class="numero">00</span>
+                    <span class="etiqueta">Horas</span>
+                </div>
+                <div class="tiempo-item">
+                    <span id="minutos" class="numero">00</span>
+                    <span class="etiqueta">Minutos</span>
+                </div>
+                <div class="tiempo-item">
+                    <span id="segundos" class="numero">00</span>
+                    <span class="etiqueta">Segundos</span>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="seccion-calendario">
+            <h2 class="titulo-seccion">El gran día</h2>
+            <div class="calendario">
+                <div class="calendario-header">
+                    <p>Septiembre 2025</p>
+                </div>
+                <div class="calendario-dias-semana">
+                    <div>L</div>
+                    <div>M</div>
+                    <div>M</div>
+                    <div>J</div>
+                    <div>V</div>
+                    <div>S</div>
+                    <div>D</div>
+                </div>
+                <div class="calendario-grid" id="calendario-grid">
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="seccion-carrusel">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="Recursos/foto1.jpg" alt="Foto de la pareja 1">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Recursos/foto2.jpg" alt="Foto de la pareja 2">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Recursos/foto4.jpg" alt="Foto de la pareja 3">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Recursos/cambiar.jpg" alt="Foto de la pareja 4">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Recursos/cambiar2.jpg" alt="Foto de la pareja 4">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Recursos/cambiar3.jpg" alt="Foto de la pareja 4">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="seccion-lugar">
+            <img src="64px/Lugar.png" alt="Lugar" class="icono">
+            <h2 class="titulo-seccion">Lugar</h2>
+            <p>Local de recepciones "El Manantial"</p>
+
+            <a href="https://www.google.com/maps/place/%22El+Manantial%22/@-12.047593,-75.2511515,870m/data=!3m1!1e3!4m15!1m8!3m7!1s0x910e953c0d02b9cd:0x33e0da29cf297218!2s%22El+Manantial%22!8m2!3d-12.047593!4d-75.2485766!10e1!16s%2Fg%2F11sqhkj11t!3m5!1s0x910e953c0d02b9cd:0x33e0da29cf297218!8m2!3d-12.047593!4d-75.2485766!16s%2Fg%2F11sqhkj11t?entry=ttu&g_ep=EgoyMDI1MDgwNi4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank" class="boton-mapa">
+                <i class="fas fa-map-marker-alt"></i> Ver Mapa
+            </a>
+        </div>
+
+        <div class="seccion-programa">
+            <h2 class="titulo-seccion">Programa</h2>
+
+            <div class="linea-de-tiempo">
+                <div class="evento-timeline">
+                    <div class="contenido-timeline">
+                        <img src="64px/Recepción de Invitados.png" alt="Recepción de Invitados" class="icono-evento">
+                        <span class="hora-timeline">11:00 AM</span>
+                        <h3>Recepción de Invitados</h3>
+                    </div>
+                </div>
+
+                <div class="evento-timeline">
+                    <div class="contenido-timeline">
+                        <img src="64px/Comienzo de la ceremonia.png" alt="Ceremonia" class="icono-evento">
+                        <span class="hora-timeline">11:15 AM</span>
+                        <h3>Comienzo de la ceremonia</h3>
+                    </div>
+                </div>
+
+                <div class="evento-timeline">
+                    <div class="contenido-timeline">
+                        <img src="64px/Baile Nupcial.png" alt="Baile Nupcial" class="icono-evento">
+                        <span class="hora-timeline">2:15 PM</span>
+                        <h3>Baile Nupcial</h3>
+                    </div>
+                </div>
+
+                <div class="evento-timeline">
+                    <div class="contenido-timeline">
+                        <img src="64px/Brindis y Almuerzo.png" alt="Brindis y Almuerzo" class="icono-evento">
+                        <span class="hora-timeline">2:45 PM</span>
+                        <h3>Brindis y Almuerzo</h3>
+                    </div>
+                </div>
+
+                <div class="evento-timeline">
+                    <div class="contenido-timeline">
+                        <img src="64px/Palabras de los Invitados.png" alt="Palabras de los Invitados"
+                            class="icono-evento">
+                        <span class="hora-timeline">3:30 PM</span>
+                        <h3>Palabras de los Invitados</h3>
+                    </div>
+                </div>
+
+                <div class="evento-timeline">
+                    <div class="contenido-timeline">
+                        <img src="64px/Entrega de regalos.png" alt="Entrega de regalos" class="icono-evento">
+                        <span class="hora-timeline">4:00 PM</span>
+                        <h3>Entrega de regalos</h3>
+                    </div>
+                </div>
+
+                <div class="evento-timeline">
+                    <div class="contenido-timeline">
+                        <img src="64px/Show Sorpresa.png" alt="Show Sorpresa" class="icono-evento">
+                        <span class="hora-timeline">5:30 PM</span>
+                        <h3>Show Sorpresa</h3>
+                    </div>
+                </div>
+
+                <div class="evento-timeline">
+                    <div class="contenido-timeline">
+                        <img src="64px/Tiempo de Fiesta.png" alt="Tiempo de Fiesta" class="icono-evento">
+                        <span class="hora-timeline">7:30 PM</span>
+                        <h3>Tiempo de Fiesta</h3>
+                    </div>
+                </div>
+
+                <div class="evento-timeline">
+                    <div class="contenido-timeline">
+                        <img src="64px/Salida de los recién casados.png" alt="Salida de los recién casados"
+                            class="icono-evento">
+                        <span class="hora-timeline">9:30 PM</span>
+                        <h3>Salida de los recién casados</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="seccion-foto">
+            <img src="Recursos/foto5.jpg" alt="Foto relacionada con las reglas o la boda" class="foto-seccion">
+        </div>
+
+
+        <div class="seccion-reglas-info">
+            <div class="cuadro-info">
+                <img src="64px/Regla para los invitados.png" alt="Reglas para los invitados" class="icono">
+                <h3>Regla para los invitados</h3>
+                <p>
+                    PROHIBIDO BEBIDAS ALCOHÓLICAS<br>
+                    “Amamos a Dios y deseamos que nuestro matrimonio refleje ese amor en cada detalle.
+                    Por ello, hemos decidido que nuestra celebración sea libre de alcohol.
+                    Agradecemos de corazón su comprensión y apoyo en este día tan especial.”
+                </p>
+            </div>
+
+            <div class="cuadro-info">
+                <img src="64px/Comparte el amor.png" alt="Comparte el amor" class="icono">
+                <h3>Comparte el amor</h3>
+                <p>
+                    ¡Ayúdanos a capturar cada momento! Descarga la aplicación <strong>WedShoots</strong> y comparte tus
+                    fotos.
+                </p>
+                <p class="codigo-album">
+                    CÓDIGO: <strong>ESB086561D</strong>
+                </p>
+
+                <div class="contenedor-qr">
+                    <div class="qr-item">
+                        <a href="https://apps.apple.com/pe/app/wedshoots/id660256196?l=en-GB" target="_blank"
+                            class="enlace-tienda">
+                            <i class="fab fa-apple"></i> App Store
+                        </a>
+                    </div>
+                    <div class="qr-item">
+                        <a href="https://play.google.com/store/apps/details?id=net.bodas.android.wedshoots"
+                            target="_blank" class="enlace-tienda">
+                            <i class="fab fa-google-play"></i> Google Play
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cuadro-info">
+                <img src="64px/Luna de mielpara los invitados.png" alt="Luna de miel" class="icono">
+                <h3>Nos falta luna de miel</h3>
+                <p>
+                    Tu presencia es el mejor regalo. Si además deseas bendecirnos con un obsequio,
+                    una contribución para nuestra luna de miel será recibida con mucho cariño.
+                </p>
+                <p>
+                    <strong>Yape: 942925240</strong><br>
+                    Richard K. Cusilayme F.
+                </p>
+                <p>
+                    <strong>Mi cuenta BBVA: </strong><br>
+                    Número de cuenta: 0011-0235-0201534451 <br>
+                    CCI: 01123500020153445194
+                </p>
+                <p>
+                    <strong>Mi cuenta BCP:</strong><br>
+                    Número de cuenta: 19394501054008<br>
+                    CCI: 00219319450105400811
+                </p>
+            </div>
+        </div>
+
+        <div class="seccion-dresscode">
+            <div class="subtitulo-compuesto">
+                <span class="parte1">Código</span>
+                <span class="parte2">de Vestimenta</span>
+                <span class="parte3">Formal</span>
+            </div>
+
+            <p class="texto-introductorio">
+                QUEREMOS QUE CADA UNO DE USTEDES SE SIENTA ESPECIAL Y LUZCA ESPECTACULAR EN NUESTRO GRAN DÍA.
+            </p>
+
+            <div class="dresscode-principal">
+                <div class="columna-atuendo" id="columna-ellos">
+                    <h3>Ellos</h3>
+                    <p class="texto-vestimenta">
+                        TRAJE CLASICA O CAMISA LISA
+                    </p>
+                    <p class="texto-vestimenta">
+                        CORBATA O CORBATIN
+                    </p>
+                    <p class="texto-vestimenta">
+                        ZAPATOS
+                    </p>
+
+                    <div class="paleta-grupo">
+                        <div class="paleta-container">
+                            <div class="color-swatch" style="background-color: #FFFFFF;" title="Rosa Palo"></div>
+                            <div class="color-swatch" style="background-color: #F4EBE2;" title="Verde Olivo"></div>
+                            <div class="color-swatch" style="background-color: #E4C9B8;" title="Terracota"></div>
+                            <div class="color-swatch" style="background-color: #CDA38B;" title="Azul Acero"></div>
+                            <div class="color-swatch" style="background-color: #9F7964;" title="Beige"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="columna-imagen-central">
+                    <img src="Recursos/pareja.webp  " alt="Animación de pareja de novios">
+                </div>
+
+                <div class="columna-atuendo" id="columna-ellas">
+                    <h3>Ellas</h3>
+                    <p class="texto-vestimenta">
+                        VESTIDO LARGO SOBRE O BAJO LA RODILLA O ENTERIZOS ELEGANTES
+                    </p>
+                    <p class="texto-vestimenta">
+                        ACCESARIOS A TU GUSTO
+                    </p>
+                    <p class="texto-vestimenta">
+                        TACONES
+                    </p>
+
+                    <div class="paleta-grupo">
+                        <div class="paleta-container">
+                            <div class="color-swatch" style="background-color: #DAE6D8;" title="Gris Oscuro"></div>
+                            <div class="color-swatch" style="background-color: #BFD0BD;" title="Azul Marino"></div>
+                            <div class="color-swatch" style="background-color: #8EA68C;" title="Negro"></div>
+                            <div class="color-swatch" style="background-color: #748B6F;" title="Verde Oscuro"></div>
+                            <div class="color-swatch" style="background-color: #324D3E;" title="Marrón"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="seccion-foto">
+            <img src="Recursos/foto6.jpg" alt="Foto para la sección de confirmación" class="foto-seccion">
+        </div>
+
+        <div class="seccion-confirmacion">
+            <img src="64px/Confirma tu asistencia.png" alt="Confirmación de asistencia" class="icono">
+            <h2 class="titulo-confirmacion">Confirma tu asistencia</h2>
+            <p class="texto-limite">Por favor confirma tu asistencia antes del 6 de septiembre.</p>
+
+            <a href="https://forms.gle/gEQz5fyxPK4KbTDo9" target="_blank" class="boton-confirmar">
+                Confirmar
+            </a>
+
+            <p class="mensaje-final">¡Esperamos verlos y celebrar juntos!</p>
+        </div>
+
+
+
+
+        <audio id="musica-boda" src="musica_boda.mp3" loop></audio>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script>
+            const botonMusica = document.getElementById('boton-musica-principal');
+            const audio = document.getElementById('musica-boda');
+
+            botonMusica.addEventListener('click', () => {
+                if (audio.paused) {
+                    audio.play();
+                    botonMusica.classList.add('playing'); // Añadimos la clase para la animación
+                } else {
+                    audio.pause();
+                    botonMusica.classList.remove('playing'); // Quitamos la clase para detener la animación
+                }
+            });
+
+            /*CUENTA REGRESIVA*/
+
+            const diasEl = document.getElementById('dias');
+            const horasEl = document.getElementById('horas');
+            const minutosEl = document.getElementById('minutos');
+            const segundosEl = document.getElementById('segundos');
+
+            const fechaBoda = '6 Sep 2025';
+
+            function cuentaRegresiva() {
+                const fechaObjetivo = new Date(fechaBoda);
+                const fechaActual = new Date();
+
+                const totalSegundos = (fechaObjetivo - fechaActual) / 1000;
+
+                const dias = Math.floor(totalSegundos / 3600 / 24);
+                const horas = Math.floor(totalSegundos / 3600) % 24;
+                const minutos = Math.floor(totalSegundos / 60) % 60;
+                const segundos = Math.floor(totalSegundos) % 60;
+
+                diasEl.innerHTML = formatoTiempo(dias);
+                horasEl.innerHTML = formatoTiempo(horas);
+                minutosEl.innerHTML = formatoTiempo(minutos);
+                segundosEl.innerHTML = formatoTiempo(segundos);
+            }
+
+            function formatoTiempo(tiempo) {
+                return tiempo < 10 ? `0${tiempo}` : tiempo;
+            }
+
+            // Llamada inicial
+            cuentaRegresiva();
+
+            setInterval(cuentaRegresiva, 1000);
+
+            /* CALENDARIO */
+
+            document.addEventListener('DOMContentLoaded', function () {
+                const grid = document.getElementById('calendario-grid');
+                const mes = 8; // Septiembre (los meses en JS van de 0 a 11)
+                const anio = 2025;
+
+                const primerDiaMes = new Date(anio, mes, 1).getDay(); // 0=Dom, 1=Lun, ...
+                const diasEnMes = new Date(anio, mes + 1, 0).getDate();
+
+                // Ajuste para que la semana empiece en Lunes (0) en vez de Domingo
+                const diaSemanaInicio = (primerDiaMes === 0) ? 6 : primerDiaMes - 1;
+
+                // 1. Crear celdas vacías al inicio
+                for (let i = 0; i < diaSemanaInicio; i++) {
+                    const celdaVacia = document.createElement('div');
+                    celdaVacia.classList.add('dia-vacio');
+                    grid.appendChild(celdaVacia);
+                }
+
+                // 2. Llenar los días del mes
+                for (let dia = 1; dia <= diasEnMes; dia++) {
+                    const celdaDia = document.createElement('div');
+                    celdaDia.classList.add('dia-calendario');
+                    celdaDia.textContent = dia;
+
+                    // ¡Destacar el día de la boda!
+                    if (dia === 6) {
+                        celdaDia.classList.add('dia-boda');
+                    }
+
+                    grid.appendChild(celdaDia);
+                }
+            });
+
+            /*CARRUSEL*/
+
+            const swiper = new Swiper('.swiper', {
+                // Opciones de configuración
+                direction: 'horizontal',
+                loop: true,
+                autoHeight: true, // <-- AÑADE ESTA LÍNEA
+
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+            });
+        </script>
+
+    </body>
+
+</html>
